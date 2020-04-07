@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="cache" class="com.don.helper.Cache"
+		factory-method="getInstance" />
+
+	<bean id="personalLoanInterestRatePropsAccessor"
+		class="com.don.accessor.PersonalLoanInterestRatesPropsAccessor">
+		<property name="key" value="personalLoan" />
+	</bean>
+
+	<bean id="homeLoanInterestRatePropsAccessor"
+		class="com.don.accessor.HomeLoanInterestRatePropsAccessor">
+		<property name="key" value="homeLoan" />
+	</bean>
+
+	<bean id="cacheManager" class="com.don.helper.CacheManager"
+		init-method="loadCache">
+		<property name="cache" ref="cache" />
+		<property name="accessors">
+			<list value-type="com.don.accessor.IAccessor">
+				<ref bean="personalLoanInterestRatePropsAccessor" />
+				<ref bean="homeLoanInterestRatePropsAccessor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="enquireLoanAgent" class="com.don.beans.EnquireLoanAgent"
+		depends-on="cacheManager">
+		<property name="cache" ref="cache" />
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

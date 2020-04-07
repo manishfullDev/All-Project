@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="applicationForm"
+		class="com.formatters.beans.ApplicationForm">
+		<property name="passport" value="93934-494" />
+	</bean>
+	<bean id="passportFormatter"
+		class="com.formatters.formatter.PassportFomatter" />
+		
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="formatters">
+			<list>
+				<ref bean="passportFormatter" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

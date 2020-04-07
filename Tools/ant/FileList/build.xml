@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="fileList" basedir="." default="init">
+	<property file="build.properties" />
+	<target name="init" depends="copy" />
+
+	<filelist id="social-images" dir="${src.dir}${file.separator}images">
+		<file name="facebook.png" />
+		<file name="whatsapp.png" />
+		<file name="twitter.png" />
+	</filelist>
+<!--
+	<target name="clean">
+		<delete>
+			<filelist refid="social-images" />
+		</delete>
+	</target>
+-->
+	<target name="copy">
+		<copy todir="${classes.dir}">
+			<filelist refid="social-images" />
+		</copy>
+	</target>
+</project>

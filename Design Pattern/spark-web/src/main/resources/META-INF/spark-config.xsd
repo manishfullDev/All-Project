@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.sparkframework.org/web/config"
+	xmlns:swc="http://www.sparkframework.org/web/config"
+	elementFormDefault="qualified">
+
+	<xsd:element name="spark-config" type="swc:sparkConfig" />
+	<xsd:complexType name="sparkConfig">
+		<xsd:sequence>
+			<xsd:element name="actions" type="swc:actions" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="actions">
+		<xsd:sequence>
+			<xsd:element name="actionMapping"
+				type="swc:actionMapping" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="actionMapping">
+		<xsd:sequence>
+			<xsd:element name="outcome" type="swc:outcome"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="path" type="xsd:string"
+			use="required" />
+		<xsd:attribute name="type" type="xsd:string"
+			use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="outcome">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="name" type="xsd:string"
+					use="required" />
+				<xsd:attribute name="page" type="xsd:string"
+					use="required" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+</xsd:schema>
+
+
+
+
+
+
+
+
+
+
+

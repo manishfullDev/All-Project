@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+	<mvc:view-controller path="/user-login.htm"
+		view-name="login" />
+	<mvc:view-controller path="/logout.htm"
+		view-name="logout" />
+		
+	<mvc:view-controller path="/home.htm"
+		view-name="home" />
+
+	<mvc:view-controller path="/project-info.htm"
+		view-name="project-info" />
+	<mvc:view-resolvers>
+		<mvc:jsp prefix="/WEB-INF/jsp/" suffix=".jsp" />
+	</mvc:view-resolvers>
+</beans>

@@ -1,0 +1,19 @@
+{
+	"accountNo": "a039803",
+	"accountHolderName": "Smith Joe",
+	"accountType": "savings",
+	"balance": 30894,
+	"address": {
+		"addressLine1": "Redwood Street",
+		"addressLine2": "XRoads",
+		"city": "banglore",
+		"state": "KN",
+		"zip": "39390",
+		"country": "India"
+	},
+	"cheque_books": [
+		"cq938",
+		"c0394",
+		"ci494"
+	]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.redbus.com/tickets/agents" xmlns:rta="http://www.redbus.com/tickets/agents">
+	<xs:element name="redbus-ticket" type="rta:redbusTicketType"/>
+	<xs:complexType name="redbusTicketType">
+		<xs:sequence>
+			<xs:element name="redbus-pnr-no" type="xs:string"/>
+			<xs:element name="transaction-no" type="xs:string"/>
+			<xs:element name="booking-date" type="xs:date"/>
+			<xs:element name="price" type="xs:float"/>
+			<xs:element name="ticket-details" type="rta:ticketDetailsType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ticketDetailsType">
+		<xs:sequence>
+			<xs:any/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ht.entities">
+	<class name="Job" table="job">
+		<id name="jobNo">
+			<column name="job_no" />
+		</id>
+		<property name="jobTitle">
+			<column name="job_title" length="100" not-null="true"
+				unique="true" />
+		</property>
+		<property name="minExperience">
+			<column name="min_experience" not-null="false" default="0" />
+		</property>
+		<property name="maxExperience">
+			<column name="max_experience" not-null="true" />
+		</property>
+		<!-- <property name="role">
+			<column name="role_nm" not-null="true" length="30" />
+		</property> -->
+		<property name="organization">
+			<column name="organization" not-null="true" length="200" />
+		</property>
+		<property name="positions">
+			<column name="positions" not-null="false" default="1" />
+		</property>
+		<property name="contactPerson">
+			<column name="contact_person_nm" not-null="false" length="100" />
+		</property>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+

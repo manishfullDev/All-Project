@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<consignment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/attributes/consignment.xsd">
+	<awb-no>a30</awb-no>
+	<address address-type="from">
+		<contact-name>Mike</contact-name>
+		<contact-no>039304</contact-no>
+		<address-line1>abc</address-line1>
+		<address-line2>xyz</address-line2>
+		<city>hyderabad</city>
+		<state>ts</state>
+		<zip>3394</zip>
+		<country>India</country>
+	</address>
+	<address address-type="to">
+		<contact-name>matt</contact-name>
+		<contact-no>9302893</contact-no>
+		<address-line1>abc</address-line1>
+		<address-line2>z939</address-line2>
+		<city>hyderabad</city>
+		<state>ts</state>
+		<zip>9393</zip>
+		<country>India</country>
+	</address>
+	<description>Box</description>
+	<unit unitsType="kg">2</unit>
+	<charges>1000</charges>
+</consignment>
+
+
+
+
+
+
+
+
+

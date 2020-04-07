@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BasicJava" basedir="." default="exec">
+  <target name="clean">
+    <delete dir="build/classes"/>
+    <delete dir="build"/>
+  </target>
+  <target name="createDirs" depends="clean">
+    <mkdir dir="build"/>
+    <mkdir dir="build/classes"/>
+  </target>
+  <target name="compile" depends="createDirs">
+    <javac srcdir="src" destdir="build/classes"/>
+  </target>
+  <target name="exec" depends="compile">
+    <java classname="com.ab.runner.PrimeNumber" classpath="build/classes"/>
+  </target>
+</project>

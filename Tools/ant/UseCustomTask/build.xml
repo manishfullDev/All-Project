@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="custom-ant-task" basedir=".">
+	<taskdef name="print" classname="com.cat.task.PrintTask" />
+
+	<print message="This is custom ant task" />
+</project>

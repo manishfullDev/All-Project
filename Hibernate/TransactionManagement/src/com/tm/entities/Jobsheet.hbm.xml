@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tm.entities">
+	<class name="Jobsheet" table="jobsheet">
+		<id name="jobsheetNo" column="jobsheet_no" />
+		<property name="openedDate" column="opened_dt" />
+		<property name="vehicleNo" column="vehicle_no" />
+		<property name="description" />
+		<property name="estimatedDeliveryDate"
+			column="estimated_delivery_dt" />
+		<property name="estimatedAmount" column="estimated_amount" />
+		<property name="status" />
+	</class>
+</hibernate-mapping>

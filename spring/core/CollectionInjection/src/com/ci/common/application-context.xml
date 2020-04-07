@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="course" class="com.ci.beans.Course">
+		<constructor-arg>
+			<set value-type="java.lang.String">
+				<value>Susan</value>
+				<value>Mike</value>
+				<value>Blake</value>
+			</set>
+		</constructor-arg>
+		<property name="subjects">
+			<list value-type="java.lang.String">
+				<value>c</value>
+				<value>s.e</value>
+				<value>data structures</value>
+			</list>
+		</property>
+		<property name="subjectFaculty">
+			<map key-type="java.lang.String" value-type="java.lang.String">
+				<entry key="c" value="Susan" />
+				<entry key="s.e" value="Mike" />
+			</map>
+		</property>
+		<property name="yearToppers">
+			<props>
+				<prop key="2011">Smith</prop>
+				<prop key="2012">Lisa</prop>
+			</props>
+		</property>
+	</bean>
+
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+

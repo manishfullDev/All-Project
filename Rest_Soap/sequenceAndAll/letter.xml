@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<letter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/sequenceAndAll/letter.xsd">
+	<from>john@linked.in</from>
+	<to>max@google.com</to>
+	<body>How are you?</body>
+	<subject>test mail</subject>	
+</letter>

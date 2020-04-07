@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21 Oct, 2019 9:11:36 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.shi.entities">
+	<class name="Company" table="company">
+		<id name="companyNo" column="company_no">
+			<generator class="increment" />
+		</id>
+		<property name="businessName" column="business_nm" />
+		<property name="establishedDate" column="established_dt" />
+		<property name="contactNo" column="contact_no" />
+		<property name="emailAddress" column="email_address" />
+		<property name="hrRepresentativeName"
+			column="hr_representative_nm" />
+	</class>
+	<query name="getAllCompanies">from Company</query>
+</hibernate-mapping>

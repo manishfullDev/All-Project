@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AntWithoutDefaults" basedir="." default="output">
+  <target name="output">
+    <echo>Without Defaults Ant Build File</echo>
+  </target>
+</project>

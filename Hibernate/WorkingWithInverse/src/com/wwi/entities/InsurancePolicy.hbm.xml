@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wwi.entities">
+	<class name="InsurancePolicy" table="insurance_policy">
+		<id name="enrollmentNo" column="enrollment_no">
+			<generator class="increment" />
+		</id>
+		<property name="planNo" column="plan_no" />
+		<property name="policyEffectiveDate"
+			column="policy_effective_dt" />
+		<property name="policyExpiryDate" column="policy_expiry_dt" />
+		<property name="sumInsurred" column="sum_insurred" />
+		<property name="status" />
+		<many-to-one name="member" column="member_no"
+			not-null="false" class="Member" />
+	</class>
+
+</hibernate-mapping>

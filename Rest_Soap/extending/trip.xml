@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/extending/trip.xsd">
+	<primary-contact-person>mike</primary-contact-person>
+	<planned-travel-date>2019-07-30</planned-travel-date>
+	<passenger>2</passenger>
+	<mobile-no>030383039</mobile-no>
+	<email-address>mike@yahoo.com</email-address>
+	<package>
+		<international-package>
+			<unique-package-no>u0393</unique-package-no>
+			<package-name>india tour</package-name>
+			<travel-mode>air</travel-mode>
+			<passport-required>true</passport-required>
+			<visa-required>true</visa-required>
+			<visa-on-arrival>true</visa-on-arrival>
+			<age-limit>false</age-limit>
+		</international-package>
+	</package>
+</trip>

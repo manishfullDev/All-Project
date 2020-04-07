@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:iti="http://www.irctc.co.in/ticket/info" targetNamespace="http://www.irctc.co.in/ticket/info" elementFormDefault="qualified">
+	<xs:element name="ticket" type="iti:ticketType"/>
+	<xs:complexType name="ticketType">
+		<xs:sequence>
+			<xs:element name="pnr-no" type="xs:string"/>
+			<xs:element name="booked-date" type="xs:date"/>
+			<xs:element name="journey-date" type="xs:date"/>
+			<xs:element name="source" type="xs:string"/>
+			<xs:element name="destination" type="xs:string"/>
+			<xs:element name="train-no" type="xs:int"/>
+			<xs:element name="arrival-time" type="xs:date"/>
+			<xs:element name="departure-time" type="xs:date"/>
+			<xs:element name="boarding-station" type="xs:string"/>
+			<xs:element name="passengers" type="iti:passengersType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="passengersType">
+		<xs:sequence>
+			<xs:element name="passenger" type="iti:passengerType" minOccurs="1" maxOccurs="6"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="passengerType">
+		<xs:sequence>
+			<xs:element name="passenger-name" type="xs:string"/>
+			<xs:element name="age" type="xs:int"/>
+			<xs:element name="gender" type="xs:string"/>
+			<xs:element name="coach" type="xs:string"/>
+			<xs:element name="bearth" type="xs:int"/>
+			<xs:element name="allotment-status" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

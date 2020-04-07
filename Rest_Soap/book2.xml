@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/book2.xsd">
+	<isbn>ie93</isbn>
+	<title>dbms</title>
+	<authors>
+		<author>
+			<author-name>tananbum</author-name>
+			<dob>1970-01-01</dob>
+		</author>
+	</authors>
+	<publisher>
+		<publisher-name>pbp</publisher-name>
+		<est-date>1970-02-01</est-date>
+	</publisher>
+</book>

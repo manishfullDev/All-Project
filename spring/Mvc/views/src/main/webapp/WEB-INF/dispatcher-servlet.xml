@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/redbusHome.htm">redbusHomeController</prop>
+				<prop key="/showSearchBusProviders.htm">showSearchBusProvidersController</prop>
+				<prop key="/doSearchBusProviders.htm">searchBusProvidersController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="redbusHomeController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="redbus-home" />
+	</bean>
+
+	<bean id="showSearchBusProvidersController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="search-bus-providers" />
+	</bean>
+
+	<bean id="searchBusProvidersController"
+		class="com.views.controller.SearchBusProvidersController" />
+
+
+	<bean
+		class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+	<bean id="search-bus-providers-xls"
+		class="com.views.view.BusProviderExcelView" />
+	<bean id="search-bus-providers-pdf"
+		class="com.views.view.BusProviderPdfView" />
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ehcache>
+	<cache name="fruitsCache" maxEntriesLocalHeap="10"
+		timeToIdleSeconds="5" timeToLiveSeconds="10" eternal="false" />
+</ehcache>

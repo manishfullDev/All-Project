@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="consignment" type="consignmentType"/>
+	<xs:complexType name="consignmentType">
+		<xs:sequence>
+			<xs:element name="awb-no" type="xs:string"/>	
+			<xs:element name="address" type="addressType" minOccurs="2" maxOccurs="2"/>
+			<xs:element name="description" type="xs:string"/>
+			<xs:element name="unit" type="unitType"/>
+			<xs:element name="charges" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="addressType">
+		<xs:sequence>
+			<xs:element name="contact-name" type="xs:string"/>
+			<xs:element name="contact-no" type="xs:string"/>
+			<xs:element name="address-line1" type="xs:string"/>
+			<xs:element name="address-line2" type="xs:string"/>	
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="state" type="xs:string"/>
+			<xs:element name="zip" type="xs:int"/>
+			<xs:element name="country" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="address-type" type="addressTypeEnum" use="required"/>
+	</xs:complexType>
+		
+	<xs:simpleType name="addressTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="from"/>
+			<xs:enumeration value="to"/>
+		</xs:restriction>	
+	</xs:simpleType>
+	
+	<xs:complexType name="unitType">
+		<xs:simpleContent>
+			<xs:extension base="nonZeroPositiveFloat">
+				<xs:attribute name="unitsType" type="unitsTypeEnum" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="unitsTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="kg"/>
+			<xs:enumeration value="grams"/>
+			<xs:enumeration value="piece"/>
+		</xs:restriction>	
+	</xs:simpleType>
+	<xs:simpleType name="nonZeroPositiveFloat">
+		<xs:restriction base="xs:float">
+			<xs:minInclusive value="1"/>
+			<xs:maxExclusive value="999999"/>
+		</xs:restriction>	
+	</xs:simpleType>
+</xs:schema>
+
+
+
+
+
+
+
+

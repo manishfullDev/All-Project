@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmm.entities">
+	<class name="Package" table="package">
+		<id name="packageNo" column="package_no">
+			<generator class="increment" />
+		</id>
+		<property name="bookingDate" column="booking_dt" />
+		<property name="weight" />
+		<property name="sourceAddress" column="source_address" />
+		<property name="destinationAddress"
+			column="destination_address" />
+		<property name="charges" />
+	</class>
+</hibernate-mapping>

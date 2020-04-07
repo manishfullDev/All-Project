@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtms.entities">
+	<class name="Tour" table="tour">
+		<id name="tourNo" column="tour_no">
+			<generator class="increment" />
+		</id>
+		<property name="packageName" column="package_nm" />
+		<property name="plannedDate" column="planned_dt" />
+		<property name="days" />
+		<property name="tourManagerName" column="tour_manager_nm" />
+		<property name="enquiryNo" column="enquiry_no" />
+		<property name="enquiryEmailAddress"
+			column="enquiry_email_address" />
+		<property name="cost" />
+		<set name="passengers" table="tour_passengers">
+			<key column="tour_no" />
+			<many-to-many column="passenger_no" class="Passenger" />
+		</set>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

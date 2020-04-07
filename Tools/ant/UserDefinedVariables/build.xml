@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="userdefinedvariables" basedir="." default="printudvariables">
+	<property name="message" value="This is a Message"/>
+	
+	<target name="printudvariables">
+		<echo>${message}</echo>
+		<echo>${ant.home}</echo>
+	</target>
+</project>

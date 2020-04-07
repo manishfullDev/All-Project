@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions
+	xmlns:ans="http://www.axisbank.com/netbanking/services"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="RechargeGatewayPartner"
+	targetNamespace="http://www.axisbank.com/netbanking/services"
+	xmlns:ant="http://www.axisbank.com/netbanking/types">
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.axisbank.com/netbanking/types">
+			<xsd:element name="withdrawlInfo">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="accountNo" type="xsd:string" />
+						<xsd:element name="atmNo" type="xsd:string" />
+						<xsd:element name="debitCardNo" type="xsd:string" />
+						<xsd:element name="amount" type="xsd:int" />
+						<xsd:element name="accountType" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="receipt">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="referenceNo" type="xsd:string" />
+						<xsd:element name="status" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="withdrawl">
+		<wsdl:part name="in" element="ant:withdrawlInfo" />
+	</wsdl:message>
+	<wsdl:message name="withdrawlResponse">
+		<wsdl:part name="out" element="ant:receipt" />
+	</wsdl:message>
+	<wsdl:portType name="netbanking">
+		<wsdl:operation name="withdrawl">
+			<wsdl:input message="ans:withdrawl" />
+			<wsdl:output message="ans:withdrawlResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="netbankingSOAPBinding"
+		type="ans:netbanking">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="withdrawl">
+			<soap:operation
+				soapAction="http://www.axisbank.com/netbanking/services/withdrawl" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="netbankingService">
+		<wsdl:port binding="ans:netbankingSOAPBinding"
+			name="netbankingSOAPPort">
+			<soap:address location="http://www.example.org/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

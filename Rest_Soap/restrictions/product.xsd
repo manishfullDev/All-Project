@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="product" type="productType"/>
+	<xs:complexType name="productType">
+		<xs:sequence>
+			<xs:element name="unique-product-no" type="xs:string"/>
+			<xs:element name="product-name" type="xs:string"/>
+			<xs:element name="category" type="categoryEnum"/>
+			<xs:element name="manufacturer-name" type="xs:string"/>
+			<xs:element name="price" type="nonZeroPositiveFloat"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="nonZeroPositiveFloat">
+		<xs:restriction base="xs:float">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="999999"/>
+		</xs:restriction>	
+	</xs:simpleType>
+	<xs:simpleType name="categoryEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="electronics"/>
+			<xs:enumeration value="home appliances"/>
+			<xs:enumeration value="furniture"/>
+		</xs:restriction>	
+	</xs:simpleType>
+</xs:schema>
+
+
+
+
+
+
+
+
+
+
+

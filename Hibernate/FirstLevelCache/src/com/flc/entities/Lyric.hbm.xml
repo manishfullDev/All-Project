@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.flc.entities">
+	<class name="Lyric" table="lyric">
+		<id name="lyricId" column="lyric_id">
+			<generator class="increment" />
+		</id>
+		<property name="songTitle" column="song_title" />
+		<property name="writeUp" column="write_up" />
+		<property name="genere" />
+		<property name="language" />
+		<property name="writtenBy" column="written_by" />
+	</class>
+</hibernate-mapping>

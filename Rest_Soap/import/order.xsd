@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.flipkart.com/shopping/types" xmlns:fst="http://www.flipkart.com/shopping/types" xmlns:bs="http://www.bluedart.com/shipping/services">
+
+	<xs:import namespace="http://www.bluedart.com/shipping/services" schemaLocation="address.xsd"/>
+	
+	<xs:element name="order" type="fst:orderType"/>
+	<xs:complexType name="orderType">
+		<xs:sequence>
+			<xs:element name="order-no" type="xs:string"/>
+			<xs:element name="products" type="fst:productsType"/>
+			<xs:element ref="bs:shipping-address"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="productsType">
+		<xs:sequence>
+			<xs:element name="product" type="fst:productType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="productType">
+		<xs:sequence>
+			<xs:element name="product-no" type="xs:string"/>
+			<xs:element name="product-name" type="xs:string"/>
+			<xs:element name="quantity" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns0="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://www.hdfc.com/netbanking/services" localpart="AccountDetailsEndpointService"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://www.hdfc.com/netbanking/services"
+                    localpart="AccountDetailsEndpointSOAP11Port"/>
+         <runtime/>
+         <operations>
+            <operation name="getAccount"/>
+         </operations>
+      </port-info>
+      <port-info>
+         <wsdl-port namespaceURI="http://www.hdfc.com/netbanking/services"
+                    localpart="AccountDetailsEndpointSOAP12Port"/>
+         <runtime/>
+         <operations>
+            <operation name="getAccount"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

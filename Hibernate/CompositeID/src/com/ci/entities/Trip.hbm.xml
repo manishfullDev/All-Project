@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ci.entities">
+	<class name="Trip" table="trip">
+		<composite-id name="pk">
+			<key-property name="source" />
+			<key-property name="destination" />
+			<key-property name="tripDay" column="trip_day" />
+			<key-property name="tripMonth" column="trip_month" />
+			<key-property name="tripYear" column="trip_year" />
+			<key-property name="organizer" />
+		</composite-id>
+		<property name="description" />
+		<property name="days" />
+		<property name="cost" />
+	</class>
+</hibernate-mapping>

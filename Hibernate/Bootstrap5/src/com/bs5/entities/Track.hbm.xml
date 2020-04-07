@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.bs5.entities">
+	<class name="Track" table="track">
+		<id name="trackNo" column="track_no" />
+		<property name="title" />
+		<property name="duration" />
+		<property name="singerName" column="singer_nm" />
+		<property name="composer" />
+		<property name="genere" />
+	</class>
+</hibernate-mapping>

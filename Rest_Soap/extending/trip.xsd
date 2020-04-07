@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="trip" type="tripType"/>
+	<xs:complexType name="tripType">
+		<xs:sequence>
+			<xs:element name="primary-contact-person" type="xs:string"/>
+			<xs:element name="planned-travel-date" type="xs:date"/>
+			<xs:element name="passenger" type="xs:int"/>
+			<xs:element name="mobile-no" type="xs:string"/>
+			<xs:element name="email-address" type="xs:string"/>	
+			<xs:element name="package" type="packageType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="packageType">
+		<xs:choice>
+			<xs:element name="domestic-package" type="domesticPackageType"/>
+			<xs:element name="international-package" type="internationalPackageType"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="domesticPackageType">
+		<xs:sequence>
+			<xs:element name="unique-package-no" type="xs:string"/>
+			<xs:element name="package-name" type="xs:string"/>
+			<xs:element name="travel-mode" type="xs:string"/>	
+		</xs:sequence>
+	</xs:complexType>
+
+	
+	<xs:complexType name="internationalPackageType">
+		<xs:complexContent>
+			<xs:extension base="domesticPackageType">
+				<xs:sequence>
+					<xs:element name="passport-required" type="xs:boolean"/>
+					<xs:element name="visa-required" type="xs:boolean"/>
+					<xs:element name="visa-on-arrival" type="xs:boolean"/>
+					<xs:element name="age-limit" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>
+
+
+
+
+
+

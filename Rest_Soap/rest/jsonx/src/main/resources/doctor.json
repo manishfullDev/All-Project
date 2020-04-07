@@ -1,0 +1,18 @@
+{
+	"doctorName": "susan",
+	"gender": "Female",
+	"experience": 12,
+	"age": 26,
+	"qualification": "mbbs",
+	"specialization": [
+		"cardio",
+		"liver"
+	],
+	"address": {
+		"addressLine1": "Redwood Street",
+		"city": "banglore",
+		"state": "KN",
+		"zip": 3939,
+		"country": "India"
+	}
+}

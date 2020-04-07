@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmoto.entities">
+	<class name="Product" table="product">
+		<id name="productNo" column="product_no">
+			<generator class="increment" />
+		</id>
+		<property name="productName" column="product_nm" />
+		<property name="manufacturedDate" column="manufactured_dt" />
+		<property name="manufacturerName" column="manufacturer_nm" />
+		<property name="price" />
+		<many-to-one name="warranty" class="Warranty" fetch="join">
+			<column name="warranty_no" unique="true" not-null="true" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

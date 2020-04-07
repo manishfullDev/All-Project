@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://192.168.56.1:7101/NetbankingProvider-INetbanking2-context-root/AccountDetailsEndpointSOAP12Port?wsdl#%7Bhttp%3A%2F%2Fwww.hdfc.com%2Fnetbanking%2Fservices%7DAccountDetailsEndpointService"
+          uri="../com/hdfc/netbanking/services/AccountDetailsEndpointService.wsdl"/>
+</catalog>

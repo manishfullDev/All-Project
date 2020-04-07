@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<insurance-policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/attributes/insurance-policy.xsd" policy-type="risk-coverage">
+	<policy-no>p303</policy-no>
+	<policy-holder-name>Matt</policy-holder-name>
+	<plan-no>93</plan-no>
+	<plan-name>Jeevan Jyothi</plan-name>
+	<tenure>36</tenure>
+	<sum-insurred>200000</sum-insurred>
+	<premium-amount>1230</premium-amount>
+</insurance-policy>

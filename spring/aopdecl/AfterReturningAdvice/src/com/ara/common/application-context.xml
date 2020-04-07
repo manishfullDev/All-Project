@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id="keyGenerator" class="com.ara.beans.KeyGenerator" />
+	<bean id="keyGenerator1" class="com.ara.beans.KeyGenerator" />
+	<bean id="verifyKeyAspect" class="com.ara.aspect.VerifyKeyAspect" />
+
+	<aop:config>
+		<!-- <aop:pointcut expression="execution(public int com.ara.beans.KeyGenerator.generateKey(int))" 
+			id="pc1" /> -->
+		<!-- <aop:pointcut expression="within(com.ara.beans.*)" id="pc1" /> -->
+		<!-- <aop:pointcut expression="target(com.ara.beans.KeyGenerator)" id="pc1"/> -->
+		<!-- <aop:pointcut expression="this(com.ara.beans.KeyGenerator)" id="pc1" 
+			/> -->
+		<aop:pointcut expression="bean(keyGenerator)" id="pc1" />
+
+		<aop:aspect ref="verifyKeyAspect">
+			<aop:after-returning method="verify"
+				pointcut-ref="pc1" returning="ret" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

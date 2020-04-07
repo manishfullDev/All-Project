@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtml.entities">
+	<class name="Auction" table="auction">
+		<id name="auctionNo" column="auction_no">
+			<generator class="increment" />
+		</id>
+		<property name="auctionDate" column="auction_dt" />
+		<property name="auctionTitle" column="auction_title" />
+		<property name="description" />
+		<property name="fees" />
+		<property name="status" />
+		<list name="participants" table="auction_participants">
+			<key column="auction_no" />
+			<list-index column="auction_participant_seq_no" base="1" />
+			<many-to-many column="participant_no"
+				class="Participant" />
+		</list>
+	</class>
+</hibernate-mapping>

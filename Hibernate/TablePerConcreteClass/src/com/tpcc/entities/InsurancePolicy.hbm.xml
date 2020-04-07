@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpcc.entities">
+	<class name="InsurancePolicy" abstract="true">
+		<id name="policyNo" column="policy_no">
+			<generator class="increment" />
+		</id>
+		<property name="policyHolderName" column="policy_holder_nm" />
+		<property name="effectiveDate" column="effective_dt" />
+		<property name="endDate" column="end_dt" />
+		<property name="insurredAmount" column="insurred_amount" />
+	</class>
+</hibernate-mapping>

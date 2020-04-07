@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="cab" class="com.ba.beans.Cab" autowire="constructor" />
+
+	 <bean id="driver" class="com.ba.beans.Driver">
+		<property name="driverName" value="smith" />
+		<property name="contactNo" value="9349483939" />
+	</bean>
+	
+	<bean id="ride" class="com.ba.beans.Ride">
+		<property name="source" value="Ameerpet"/>
+		<property name="destination" value="Madhapur"/>
+	</bean>
+	
+<!-- 
+	<bean id="driver2" class="com.ba.beans.Driver" autowire-candidate="false">
+		<property name="driverName" value="Robert" />
+		<property name="contactNo" value="930383939" />
+	</bean> -->
+
+
+</beans>

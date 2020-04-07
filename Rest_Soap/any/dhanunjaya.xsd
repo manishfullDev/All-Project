@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.dhanunjaya.com/travel/associates" xmlns:dts="http://www.dhanunjaya.com/travel/associates">
+	<xs:element name="dhanunjaya-ticket" type="dts:dhanunjayaTicketType"/>
+	<xs:complexType name="dhanunjayaTicketType">
+		<xs:sequence>
+			<xs:element name="pnr-no" type="xs:string"/>
+			<xs:element name="service-no" type="xs:string"/>
+			<xs:element name="bus-type" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+			<xs:element name="destination" type="xs:string"/>
+			<xs:element name="travel-date" type="xs:date"/>
+			<xs:element name="seats" type="dts:seatsType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="seatsType">
+		<xs:sequence>
+			<xs:element name="seat-no" type="xs:int" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	
+</xs:schema>

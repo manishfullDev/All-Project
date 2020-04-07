@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="FileSet" basedir="." default="init">
+	<property file="build.properties" />
+	<target name="init" depends="clean,copy" />
+
+	<patternset id="images">
+		<include name="**/*.png" />
+		<include name="**/*.jpg" />
+	</patternset>
+
+	<target name="clean">
+		<delete>
+			<fileset dir="${classes.dir}">
+				<patternset refid="images" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="copy">
+		<copy todir="${classes.dir}">
+			<fileset dir="${src.dir}${file.separator}images">
+				<patternset refid="images" />
+			</fileset>
+		</copy>
+	</target>
+</project>

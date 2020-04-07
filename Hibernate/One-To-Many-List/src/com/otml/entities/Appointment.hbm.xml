@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otml.entities">
+	<class name="Appointment" table="appointment">
+		<id name="appointmentNo" column="appointment_no">
+			<generator class="increment" />
+		</id>
+		<property name="appointmentDate" column="appointment_dt" />
+		<property name="doctorName" column="doctor_nm" />
+		<property name="remarks" />
+		<property name="status" />
+	</class>
+</hibernate-mapping>

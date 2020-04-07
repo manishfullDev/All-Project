@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rt:redbus-ticket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.redbus.com/tickets/agents D:/work/master/webservices/20190417/any/redbus.xsd http://www.kaleswara.com/travel/partner file:///D:/work/master/webservices/20190417/any/kaleswara.xsd" xmlns:rt="http://www.redbus.com/tickets/agents" xmlns:kp="http://www.kaleswara.com/travel/partner">
+
+	<rt:redbus-pnr-no>r0393</rt:redbus-pnr-no>
+	<rt:transaction-no>9392039479</rt:transaction-no>
+	<rt:booking-date>2019-07-01</rt:booking-date>
+	<rt:price>838</rt:price>
+	<rt:ticket-details>
+		<kp:kaleswara-ticket>
+			<kp:ticket-no>5</kp:ticket-no>
+			<kp:bus-no>35</kp:bus-no>
+			<kp:bus-type>sleeper</kp:bus-type>
+			<kp:source>hyderabad</kp:source>
+			<kp:destination>banglore</kp:destination>
+			<kp:journey-date>2019-07-01</kp:journey-date>
+			<kp:seats>
+				<kp:seat>
+					<kp:seat-no>23</kp:seat-no>
+					<kp:side>left</kp:side>
+				</kp:seat>
+			</kp:seats>
+		</kp:kaleswara-ticket>
+	</rt:ticket-details>
+</rt:redbus-ticket>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmoto.entities">
+	<class name="Warranty" table="warranty">
+		<id name="warrantyNo" column="warranty_no">
+			<generator class="increment" />
+		</id>
+		<property name="warrantyInMonths" column="warranty_in_months" />
+		<property name="termsAndConditions"
+			column="terms_and_conditions" />
+		<property name="effectiveDate" column="effective_dt" />
+		<property name="expiryDate" column="expiry_dt" />
+		<property name="retailerBusinessName"
+			column="retailer_business_nm" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+package com.mcp.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RootConfig {
+
+}

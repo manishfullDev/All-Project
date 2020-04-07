@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="googleMaps" class="com.tpct.beans.GoogleMaps">
+		<property name="source"
+			value="Mithrivanam,Ameerpet cross-roads,500073" />
+		<property name="destination"
+			value="Cyber Towers,Hitech City,500081" />
+		<property name="mapType" value="Satelite,true" />
+	</bean>
+
+	<bean id="locationConverter"
+		class="com.tpct.converters.StringToLocationConverter" />
+	<bean id="mapTypeConverter"
+		class="com.tpct.converters.StringToMapTypeConverter" />
+
+	<bean id="conversionService"
+		class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<set>
+				<ref bean="locationConverter" />
+				<ref bean="mapTypeConverter" />
+			</set>
+		</property>
+	</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+

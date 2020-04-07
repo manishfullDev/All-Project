@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="super-market" type="superMarketType"/>
+	<xs:complexType name="superMarketType">
+		<xs:sequence>
+			<xs:element name="super-market-name" type="xs:string"/>
+			<xs:element name="license-no" type="xs:string"/>
+			<xs:element name="products" type="productsType"/>
+			<xs:element name="total-amount" type="xs:float"/>
+			<xs:element name="discount" type="xs:int"/>
+			<xs:element name="paid-amount" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	
+	
+	<xs:complexType name="productsType">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="grocery" type="groceryType"/>
+			<xs:element name="vegetable" type="vegetableType"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="groceryType">
+		<xs:sequence>
+			<xs:element name="grocery-name" type="xs:string"/>
+			<xs:element name="units" type="xs:int"/>
+			<xs:element name="brand" type="xs:string"/>
+			<xs:element name="price" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+
+	<xs:complexType name="vegetableType">
+		<xs:sequence>
+			<xs:element name="vegetable-name" type="xs:string"/>
+			<xs:element name="quantity" type="xs:int"/>
+			<xs:element name="price" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>	
+</xs:schema>

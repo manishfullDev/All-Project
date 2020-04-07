@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/restrictions/product.xsd">
+	<unique-product-no>u303</unique-product-no>
+	<product-name>television</product-name>
+	<category>electronics</category>
+	<manufacturer-name>sony</manufacturer-name>
+	<price>1</price>
+</product>

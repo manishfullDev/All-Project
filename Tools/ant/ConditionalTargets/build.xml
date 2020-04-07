@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="conditionalTargets" basedir="." default="init">
+	<property file="build-common.properties" />
+
+	<target name="init" depends="failJdk,clean,create-dirs,compile,execute" />
+
+	<condition property="jdk18">
+		<equals arg1="${ant.java.version}" arg2="1.9" />
+	</condition>
+
+	<target name="failJdk" unless="jdk18">
+		<fail message="Jdk 1.8 is required" />
+	</target>
+	
+	<target name="clean">
+		<delete dir="${classes.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+	<target name="create-dirs">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${classes.dir}" />
+	</target>
+	<target name="compile">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" />
+	</target>
+	<target name="execute">
+		<java classname="com.ct.test.CTTest" classpath="${classes.dir}" />
+	</target>
+</project>

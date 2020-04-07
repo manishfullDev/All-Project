@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ExecutableJar" basedir="." default="init">
+	<property file="build.properties" />
+
+	<target name="init" depends="clean,create-dirs,compile,package,execute" />
+	<target name="clean">
+		<delete dir="${dist.dir}" />
+		<delete dir="${classes.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+	<target name="create-dirs">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+	<target name="compile">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" />
+	</target>
+	<target name="package">
+		<jar destfile="${dist.dir}${file.separator}${ant.project.name}.jar" basedir="${classes.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="com.ej.launcher.UtilsTest" />
+			</manifest>
+		</jar>
+	</target>
+	<target name="execute">
+		<java jar="${dist.dir}${file.separator}${ant.project.name}.jar" fork="true">
+			<arg value="153" />
+		</java>
+	</target>
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

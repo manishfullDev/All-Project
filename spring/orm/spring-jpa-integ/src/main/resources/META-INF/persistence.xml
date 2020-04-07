@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="garage_system_pu">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.sji.entities.Company</class>
+		<properties>
+			<property name="javax.persistence.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.url"
+				value="jdbc:mysql://localhost:3306/garage_system" />
+			<property name="javax.persistence.user" value="root" />
+			<property name="javax.persistence.password" value="root" />
+			<property name="show_sql" value="true" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+		</properties>
+	</persistence-unit>
+</persistence>
+	

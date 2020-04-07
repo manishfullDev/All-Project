@@ -1,0 +1,3 @@
+set HIB_HOME=D:\work\master\hibernate\20190417\hib-tools
+set HIB_LIB=%HIB_HOME%\lib
+set HIB_CP=%HIB_LIB%\antlr-2.7.7.jar;%HIB_LIB%\dom4j-1.6.1.jar;%HIB_LIB%\hibernate-commons-annotations-4.0.4.Final.jar;%HIB_LIB%\hibernate-core-4.3.5.Final.jar;%HIB_LIB%\hibernate-entitymanager-4.3.5.Final.jar;%HIB_LIB%\hibernate-jpa-2.1-api-1.0.0.Final.jar;%HIB_LIB%\jandex-1.1.0.Final.jar;%HIB_LIB%\javassist-3.18.1-GA.jar;%HIB_LIB%\jboss-logging-3.1.3.GA.jar;%HIB_LIB%\jboss-logging-annotations-1.2.0.Beta1.jar;%HIB_LIB%\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;%HIB_LIB%\mysql-connector-java-5.1.22-bin.jar;%HIB_HOME%\bin

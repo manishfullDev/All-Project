@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpc.entities">
+	<subclass name="CriticalCareAdmission"
+		extends="GeneralAdmission" discriminator-value="critical-care">
+		<property name="reasonForAdmission"
+			column="reason_for_admission" />
+		<property name="severityOfProblem"
+			column="severity_of_problem" />
+		<property name="estimatedCriticalCareSupportInHours"
+			column="estimated_critical_care_support_in_hours" />
+	</subclass>
+</hibernate-mapping>

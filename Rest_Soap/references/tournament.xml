@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournament xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/references/tournament.xsd">
+	<info>
+		<unique-name>Champions Cup</unique-name>
+		<sponsorer>Lays</sponsorer>
+		<place>hyderabad</place>
+		<match-date>2019-07-22</match-date>
+		<organizer>Hyderabad Club</organizer>
+		<teams>
+			<team>
+				<unique-name>Secunderabad Team</unique-name>
+				<sponsorer>britania</sponsorer>
+				<captain>Gourav</captain>
+				<coach>Micheal</coach>
+			</team>
+			<team>
+				<unique-name>Hyderabad Team</unique-name>
+				<sponsorer>Horlicks</sponsorer>
+				<captain>Ravi</captain>
+				<coach>Samuel</coach>
+			</team>
+		</teams>
+	</info>
+</tournament>

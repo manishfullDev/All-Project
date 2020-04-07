@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<super-market xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/groupOccurences/supermarket.xsd">
+	<super-market-name>Rantadeep</super-market-name>
+	<license-no>3939444</license-no>
+	<products>
+		<grocery>
+			<grocery-name>Dal</grocery-name>
+			<units>1</units>
+			<brand>Super</brand>
+			<price>100</price>
+		</grocery>
+		
+		<vegetable>
+			<vegetable-name>brinjal</vegetable-name>
+			<quantity>2</quantity>
+			<price>100</price>
+		</vegetable>
+		<grocery>
+			<grocery-name>Dal</grocery-name>
+			<units>1</units>
+			<brand>Super</brand>
+			<price>100</price>
+		</grocery>
+		<vegetable>
+			<vegetable-name>brinjal</vegetable-name>
+			<quantity>2</quantity>
+			<price>100</price>
+		</vegetable>
+		<grocery>
+			<grocery-name>Dal</grocery-name>
+			<units>1</units>
+			<brand>Super</brand>
+			<price>100</price>
+		</grocery>
+		<grocery>
+			<grocery-name>Dal</grocery-name>
+			<units>1</units>
+			<brand>Super</brand>
+			<price>100</price>
+		</grocery>
+		<grocery>
+			<grocery-name>Dal</grocery-name>
+			<units>1</units>
+			<brand>Super</brand>
+			<price>100</price>
+		</grocery>
+	</products>
+	<total-amount>300</total-amount>
+	<discount>10</discount>
+	<paid-amount>270</paid-amount>
+</super-market>

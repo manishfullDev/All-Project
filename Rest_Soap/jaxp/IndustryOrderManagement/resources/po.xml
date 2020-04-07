@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<purchase-order>
+	<order-items>
+		
+	</order-items>
+	<shipping-address>
+		<address-line1>Cross Roads</address-line1>
+		<address-line2>Bazar</address-line2>
+		<city>Hyderabad</city>
+		<state>TS</state>
+		<zip>39384</zip>
+		<country>India</country>
+	</shipping-address>
+</purchase-order>

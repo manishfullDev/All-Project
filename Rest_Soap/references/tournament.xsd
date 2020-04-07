@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name="tournament" type="tournamentType"/>
+	
+	<xs:group name="common-group">
+		<xs:sequence>
+			<xs:element name="unique-name" type="xs:string"/>
+			<xs:element name="sponsorer" type="xs:string"/>
+		</xs:sequence>
+	</xs:group>
+	
+	<xs:complexType name="tournamentType">
+		<xs:sequence>
+			<xs:element name="info" type="infoType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="infoType">
+		<xs:sequence>
+			<xs:group ref="common-group"/>
+			<xs:element name="place" type="xs:string"/>
+			<xs:element name="match-date" type="xs:date"/>
+			<xs:element name="organizer" type="xs:string"/>
+			<xs:element name="teams" type="teamsType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="teamsType">
+		<xs:sequence>
+			<xs:element name="team" type="teamType" minOccurs="2" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="teamType">
+		<xs:sequence>
+			<xs:group ref="common-group"/>
+			<xs:element name="captain" type="xs:string"/>
+			<xs:element name="coach" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
+
+
+
+
+
+
+
+
+

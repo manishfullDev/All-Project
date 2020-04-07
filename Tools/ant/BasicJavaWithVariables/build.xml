@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="BasicJavaWithVariables" basedir="." default="init">
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}${file.separator}classes" />
+	<property name="src.dir" value="src" />
+
+	<target name="init" depends="clean,create-dirs,compile,execute" />
+	<target name="clean">
+		<delete dir="${classes.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+	<target name="create-dirs">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${classes.dir}" />
+	</target>
+	<target name="compile">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" />
+	</target>
+	<target name="execute">
+		<java classname="com.bjwv.runner.UtilTest" classpath="${classes.dir}" />
+	</target>
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

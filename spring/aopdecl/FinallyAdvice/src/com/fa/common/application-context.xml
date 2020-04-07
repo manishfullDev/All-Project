@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id="browseCatalog" class="com.fa.accessor.BrowseCatalog" />
+	<bean id="userTrackingAspect"
+		class="com.fa.aspect.UserTrackingAspect" />
+
+	<aop:config>
+		<aop:pointcut
+			expression="target(com.fa.accessor.BrowseCatalog)" id="pc1" />
+		<aop:aspect ref="userTrackingAspect">
+			<aop:after method="trackBrowseHistory" pointcut-ref="pc1" />
+		</aop:aspect>
+	</aop:config>
+
+
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="insurance-policy" type="insurancePolicyType"/>
+	<xs:complexType name="insurancePolicyType">	
+		<xs:sequence>
+			<xs:element name="policy-no" type="xs:string"/>
+			<xs:element name="policy-holder-name" type="xs:string"/>
+			<xs:element name="plan-no" type="xs:string"/>
+			<xs:element name="plan-name" type="xs:string"/>
+			<xs:element name="tenure" type="xs:int"/>
+			<xs:element name="sum-insurred" type="xs:int"/>
+			<xs:element name="premium-amount" type="xs:float"/>
+		</xs:sequence>
+		<xs:attribute name="policy-type" type="policyTypeEnum" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="policyTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="risk-coverage"/>
+			<xs:enumeration value="accidental-coverage"/>
+		</xs:restriction>	
+	</xs:simpleType>
+</xs:schema>
+
+
+
+
+
+
+
+

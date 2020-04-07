@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions
+	xmlns:ars="http://www.airtel.in/recharge/service"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="RechargeGatewayPartner"
+	targetNamespace="http://www.airtel.in/recharge/service"
+	xmlns:art="http://www.airtel.in/recharge/types">
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.airtel.in/recharge/types">
+			<xsd:element name="topup">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="mobileNo" type="xsd:string" />
+						<xsd:element name="circle" type="xsd:string" />
+						<xsd:element name="subscriberName" type="xsd:string" />
+						<xsd:element name="planName" type="xsd:string" />
+						<xsd:element name="amount" type="xsd:float" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="receipt">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="referenceNo" type="xsd:string" />
+						<xsd:element name="status" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="cause">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="error-cause" type="xsd:string" />
+						<xsd:element name="error-type" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="recharge">
+		<wsdl:part name="in" element="art:topup" />
+	</wsdl:message>
+	<wsdl:message name="rechargeResponse">
+		<wsdl:part name="out" element="art:receipt" />
+	</wsdl:message>
+	<wsdl:message name="MobileNotValidFault">
+		<wsdl:part name="cause" element="art:cause" />
+	</wsdl:message>
+	<wsdl:portType name="RechargeGatewayPartner">
+		<wsdl:operation name="recharge">
+			<wsdl:input message="ars:recharge" />
+			<wsdl:output message="ars:rechargeResponse" />
+			<wsdl:fault name="fault1"
+				message="ars:MobileNotValidFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="RechargeGatewayPartnerSOAPBinding"
+		type="ars:RechargeGatewayPartner">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="recharge">
+			<soap:operation
+				soapAction="http://www.airtel.in/recharge/service/recharge" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="fault1">
+				<soap:fault name="fault1" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="RechargeGatewayPartnerService">
+		<wsdl:port binding="ars:RechargeGatewayPartnerSOAPBinding"
+			name="RechargeGatewayPartnerSOAPPort">
+			<soap:address location="http://www.example.org/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

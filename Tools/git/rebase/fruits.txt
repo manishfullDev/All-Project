@@ -1,0 +1,6 @@
+apple
+<<<<<<< HEAD
+orangegrape
+=======
+orangepapayabanana
+>>>>>>> a5020b5... banana added

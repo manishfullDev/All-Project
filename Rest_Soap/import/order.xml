@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ft:order xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.flipkart.com/shopping/types file:///D:/work/master/webservices/20190417/import/order.xsd" xmlns:ft="http://www.flipkart.com/shopping/types" xmlns:bs="http://www.bluedart.com/shipping/services">
+	<ft:order-no>3535</ft:order-no>
+	<ft:products>
+		<ft:product>
+			<ft:product-no>4</ft:product-no>
+			<ft:product-name>television</ft:product-name>
+			<ft:quantity>1</ft:quantity>
+		</ft:product>
+	</ft:products>
+	<bs:shipping-address>
+		<bs:house-no>24</bs:house-no>
+		<bs:street-address>james street</bs:street-address>
+		<bs:city>hyderabad</bs:city>
+		<bs:state>ts</bs:state>
+		<bs:zip>435</bs:zip>
+		<bs:country>India</bs:country>
+	</bs:shipping-address>	
+</ft:order>

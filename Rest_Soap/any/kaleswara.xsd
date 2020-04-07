@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.kaleswara.com/travel/partner" xmlns:ktp="http://www.kaleswara.com/travel/partner">
+	<xs:element name="kaleswara-ticket" type="ktp:kaleswaraTicketType"/>
+	<xs:complexType name="kaleswaraTicketType">
+		<xs:sequence>
+			<xs:element name="ticket-no" type="xs:string"/>
+			<xs:element name="bus-no" type="xs:string"/>
+			<xs:element name="bus-type" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+			<xs:element name="destination" type="xs:string"/>
+			<xs:element name="journey-date" type="xs:date"/>
+			<xs:element name="seats" type="ktp:seatsType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="seatsType">
+		<xs:sequence>
+			<xs:element name="seat" type="ktp:seatType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="seatType">
+		<xs:sequence>
+			<xs:element name="seat-no" type="xs:int"/>
+			<xs:element name="side" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.transport.entities">
+	<class name="BusProviders" table="bus_providers">
+		<id name="busProviderId" column="bus_provider_id">
+			<generator class="increment" />
+		</id>
+		<property name="businessName" column="business_nm" />
+		<property name="associatedDate" column="associated_dt" />
+		<property name="primaryBusinessContactNo"
+			column="primary_business_contact_no" />
+		<property name="primaryBusinessEmailAddress"
+			column="primary_business_email_address" />
+		<property name="status" />
+	</class>
+</hibernate-mapping>

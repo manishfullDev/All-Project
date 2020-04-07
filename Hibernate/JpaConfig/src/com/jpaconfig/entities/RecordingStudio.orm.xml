@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity-mappings
+	xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm 
+        http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+	version="2.0">
+	<entity class="com.jpaconfig.entities.RecordingStudio">
+		<table name="recording_studio" />
+		<attributes>
+			<id name="recordingStudioId">
+				<column name="recording_studio_id" />
+			</id>
+			<basic name="studioName">
+				<column name="studio_nm" />
+			</basic>
+			<basic name="establishedDate">
+				<column name="established_dt" />
+			</basic>
+			<basic name="streetAddress">
+				<column name="street_address" />
+			</basic>
+			<basic name="city" />
+			<basic name="state" />
+			<basic name="zip" />
+			<basic name="country" />
+			<basic name="contactNo">
+				<column name="contact_nbr" />
+			</basic>
+			<basic name="emailAddress">
+				<column name="email_address" />
+			</basic>
+		</attributes>
+	</entity>
+</entity-mappings>
+
+
+
+
+
+
+
+
+
+
+
+
+

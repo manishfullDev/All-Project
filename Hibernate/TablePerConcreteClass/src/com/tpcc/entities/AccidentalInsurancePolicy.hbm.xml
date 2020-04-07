@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpcc.entities">
+	<union-subclass name="AccidentalInsurancePolicy"
+		table="accidental_insurance_policy" extends="InsurancePolicy">
+		<property name="internationalCoverage"
+			column="international_coverage" />
+		<property name="disabilityCoveragePercentage"
+			column="disability_coverage_percentage" />
+	</union-subclass>
+</hibernate-mapping>

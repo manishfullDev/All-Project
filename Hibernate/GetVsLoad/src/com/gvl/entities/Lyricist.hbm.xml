@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.gvl.entities">
+	<class name="Lyricist" table="lyricist" proxy="ILyricist">
+		<id name="lyricistId" column="lyricist_id" />
+		<property name="lyricistName" column="lyricist_nm" />
+		<property name="dob" />
+		<property name="gender" />
+		<property name="songsWrote" column="songs_wrote" />
+		<property name="highestAward" column="highest_award" />
+	</class>
+</hibernate-mapping>

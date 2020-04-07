@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.bluedart.com/shipping/services" xmlns:bs="http://www.bluedart.com/shipping/services">
+	<xs:element name="shipping-address" type="bs:shippingAddressType"/>
+	<xs:complexType name="shippingAddressType">
+		<xs:sequence>
+			<xs:element name="house-no" type="xs:string"/>
+			<xs:element name="street-address" type="xs:string"/>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="state" type="xs:string"/>
+			<xs:element name="zip" type="xs:int"/>
+			<xs:element name="country" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

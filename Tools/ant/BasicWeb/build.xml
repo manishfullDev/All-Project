@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="BasicWeb" basedir="." default="init">
+	<property file="build-common.properties" />
+	<target name="init" depends="clean,create-dirs,compile,package,deploy" />
+	<import file="${server.bin}/catalina-tasks.xml" />
+
+	<path id="web.lib.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="${classes.dir}" />
+		<delete dir="${dist.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+	<target name="create-dirs">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${classes.dir}" />
+	</target>
+	<target name="compile">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="web.lib.classpath" />
+	</target>
+	<target name="package">
+		<war destfile="${dist.dir}${file.separator}${ant.project.name}.war" webxml="${webinf.dir}${file.separator}web.xml">
+			<classes dir="${classes.dir}">
+				<include name="**/*.class" />
+			</classes>
+			<lib dir="${lib.dir}">
+				<include name="*.jar" />
+				<exclude name="servlet-api.jar" />
+				<exclude name="jsp-api.jar" />
+			</lib>
+			<fileset dir="${webcontent.dir}">
+				<include name="**/*.jsp" />
+			</fileset>
+		</war>
+	</target>
+	<target name="deploy">
+		<deploy password="${management.console.password}" username="${management.console.user}" url="${management.console.url}" localwar="${basedir}${file.separator}${dist.dir}${file.separator}${ant.project.name}.war" path="/BasicWeb">
+		</deploy>
+	</target>
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

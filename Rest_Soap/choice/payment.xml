@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/work/master/webservices/20190417/choice/payment.xsd">
+	<order-no>o03</order-no>
+	<unique-merchant-no>um3030</unique-merchant-no>
+	<tx-detail>
+		<card>
+			<card-no>9304-3033-3939-2829</card-no>
+			<expiry-date>01/22</expiry-date>
+			<issued-bank>icici bank</issued-bank>
+			<cvv>393</cvv>
+		</card>		
+	</tx-detail>
+</payment>

@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebService xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webservice">
+   <list n="CHILD_NODES">
+      <url path="../../../../../public_html/WEB-INF/wsdl/AccountDetailsEndpointService.wsdl"/>
+      <url path="AccountDetailsEndpoint.java"/>
+      <url path="../types/package-info.java"/>
+      <url path="../types/ObjectFactory.java"/>
+      <url path="../types/Account.java"/>
+      <url path="AccountDetailsEndpointImpl.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <list n="BD_">
+         <hash>
+            <value n="BOUND_PORT_TYPE" v="{http://www.hdfc.com/netbanking/services}AccountDetailsEndpoint"/>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+            <value n="NAME" v="{http://www.hdfc.com/netbanking/services}AccountDetailsEndpointSOAP11Binding"/>
+            <list n="OP_BINDINGS">
+               <hash>
+                  <value n="BOUND_OPERATION" v="com.hdfc.netbanking.types.Account.getAccount.java.lang.String"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+         </hash>
+      </list>
+      <list n="BINDING_FILES"/>
+      <list n="GENERATED_FILES">
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="D:\work\master\webservices\20190417\soap\oraclewls\NetbankingProvider\INetbanking2\src\com\hdfc\netbanking\services\AccountDetailsEndpoint.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="D:\work\master\webservices\20190417\soap\oraclewls\NetbankingProvider\INetbanking2\src\com\hdfc\netbanking\types\package-info.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="D:\work\master\webservices\20190417\soap\oraclewls\NetbankingProvider\INetbanking2\src\com\hdfc\netbanking\types\ObjectFactory.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="D:\work\master\webservices\20190417\soap\oraclewls\NetbankingProvider\INetbanking2\src\com\hdfc\netbanking\types\Account.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+      </list>
+      <value n="GENERATION_OPTION" v="ANNOTATIONS_WSDL_SEI"/>
+      <value n="GUID" v="a7f91afe-016c-1000-8021-c0a8380145e8"/>
+      <value n="LAST_GENERATION_BOTTOM_UP" v="false"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaWebService"/>
+      <list n="PO_">
+         <hash>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+            <value n="NAME" v="AccountDetailsEndpointSOAP11Port"/>
+            <value n="PORT_BINDING_NAME" v="{http://www.hdfc.com/netbanking/services}AccountDetailsEndpointSOAP11Binding"/>
+            <list n="PORT_OPS">
+               <hash>
+                  <value n="EXPOSED_BD_OPERATION" v="com.hdfc.netbanking.types.Account.getAccount.java.lang.String"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="URL" protocol="http" host="www.example.com" path=""/>
+         </hash>
+      </list>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="ADD_ANNOTATIONS">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.AnnotationProperties"/>
+         </hash>
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <list n="PT_">
+         <hash>
+            <value n="AUTO_SERVICE_INTERFACE"/>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+            <value n="NAME" v="{http://www.hdfc.com/netbanking/services}AccountDetailsEndpoint"/>
+            <hash n="PROPERTY_GROUPS"/>
+            <value n="PT_CLASS" v="com.hdfc.netbanking.services.AccountDetailsEndpointImpl"/>
+            <value n="PT_SERVICE_INTERFACE" v="com.hdfc.netbanking.services.AccountDetailsEndpoint"/>
+            <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="com.hdfc.netbanking.services.AccountDetailsEndpoint"/>
+         </hash>
+      </list>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <url n="TARGET_PROJECT" path="../../../../../INetbanking2.jpr"/>
+      <value n="TOPDOWN_GENERATION_OPTION" v="JAVA_SEI"/>
+      <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+      <url n="WS_REFERENCE_WSDL" path="../../../../../public_html/WEB-INF/wsdl/AccountDetailsEndpointService.wsdl"/>
+      <value n="WS_TARGET_NAMESPACE" v="http://www.hdfc.com/netbanking/services"/>
+      <value n="WS_URI" v="AccountDetailsEndpointService"/>
+      <url n="WS_WSDL_FILE" path="../../../../../public_html/WEB-INF/wsdl/AccountDetailsEndpointService.wsdl"/>
+      <list n="WSDL_DEPENDENT_FILES"/>
+   </hash>
+</jdevws:WebService>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/pmt.htm">vpmtc</prop>
+				<prop key="/ct.htm">ctc</prop>
+			</props>
+		</property>
+		<property name="interceptors">
+			<list>
+				<ref bean="maintainanceCheckInterceptor" />
+			</list>
+		</property>
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+
+	<bean id="maintainanceCheckInterceptor"
+		class="com.hi.interceptors.MaintainanceCheckHandlerInterceptor" />
+
+	<bean id="vpmtc"
+		class="com.hi.controller.ViewPlanMyTravelController" />
+	<bean id="ctc" class="com.hi.controller.CancelTicketController" />
+
+	<bean name="/bh.htm"
+		class="com.hi.controller.ViewBookingHistoryController" />
+	<bean name="/pt.htm"
+		class="com.hi.controller.PrintTicketController" />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

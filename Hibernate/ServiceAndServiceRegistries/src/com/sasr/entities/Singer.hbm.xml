@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sasr.entities">
+	<class name="Singer" table="singer">
+		<id name="singerId" column="singer_id" />
+		<property name="singerFullName" column="singer_full_name" />
+		<property name="dob" />
+		<property name="gender" />
+		<property name="mobileNo" column="mobile_nbr" />
+		<property name="emailAddress" column="email_address" />
+		<property name="genereType" column="genere_type" />
+		<property name="language" />
+	</class>
+</hibernate-mapping>

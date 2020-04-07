@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpsc.entities">
+	<joined-subclass name="IntensiveCareAdmission"
+		table="intensive_care_admission" extends="GeneralAdmission">
+		<key column="intensive_care_admission_no" />
+		<property name="inChargeDoctorName"
+			column="incharge_doctor_nm" />
+		<property name="chancesOfSurvival"
+			column="chances_of_survival" />
+		<property name="medicalSupportLevel"
+			column="medical_support_level" />
+		<property name="monitoringFrequencyInMinutues"
+			column="monitoring_frequency_in_minutes" />
+	</joined-subclass>
+</hibernate-mapping>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BasicAnt" basedir=".">
+  <target name="print">
+    <echo>This is my first ant build script</echo>
+  </target>
+</project>

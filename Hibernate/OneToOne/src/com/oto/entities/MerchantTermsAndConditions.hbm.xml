@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="MerchantTermsAndConditions"
+		table="merchant_terms_and_conditions">
+		<id name="merchantNo" column="merchant_no">
+			<generator class="foreign">
+				<param name="property">merchant</param>
+			</generator>
+		</id>
+		<property name="effectiveDate" column="effective_dt" />
+		<property name="commisionCharges" column="commision_charges" />
+		<property name="joiningCharges" column="joining_charges" />
+		<property name="annualCharges" column="annual_charges" />
+		<property name="deliveryCharges" column="delivery_charges" />
+		<one-to-one name="merchant" foreign-key="merchant_no_fk"
+			class="Merchant" />
+	</class>
+</hibernate-mapping>

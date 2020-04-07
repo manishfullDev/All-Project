@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swc:spark-config
+	xmlns:swc="http://www.sparkframework.org/web/config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sparkframework.org/web/config ../../../../../spark-web/src/main/resources/META-INF/spark-config.xsd ">
+	<swc:actions>
+		<swc:actionMapping path="/bookTicket.web"
+			type="in.redbus.travel.action.BookTicketSparkAction">
+			<swc:outcome name="ticket" page="/ticket.jsp" />
+		</swc:actionMapping>
+	</swc:actions>
+</swc:spark-config>

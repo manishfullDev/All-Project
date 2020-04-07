@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11 Jun, 2019 11:26:25 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.fh.entities.ServiceAdvisor"
+		table="service_advisor">
+		<id name="serviceAdvisorNo" column="service_advisor_no" />
+		<property name="serviceAdvisorName"
+			column="service_advisor_nm" />
+		<property name="dob" column="dob" />
+		<property name="gender" column="gender" />
+		<property name="experience" column="experience" />
+		<property name="mobileNo" column="mobile_nbr" />
+		<property name="emailAddress" column="email_address" />
+	</class>
+</hibernate-mapping>

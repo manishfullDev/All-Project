@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ticket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.irctc.co.in/ticket/info file:///D:/work/master/webservices/20190417/namespace/ticket.xsd" xmlns="http://www.irctc.co.in/ticket/info">
+	<pnr-no>3903</pnr-no>
+	<booked-date>2019-06-12</booked-date>
+	<journey-date>2019-08-01</journey-date>
+	<source>hyderabad</source>
+	<destination>banglore</destination>
+	<train-no>35</train-no>
+	<arrival-time>2019-08-01</arrival-time>
+	<departure-time>2019-08-01</departure-time>
+	<boarding-station>hyderabad</boarding-station>
+	<passengers>
+		<passenger>
+			<passenger-name>Nick</passenger-name>
+			<age>25</age>
+			<gender>Male</gender>
+			<coach>S12</coach>
+			<bearth>23</bearth>
+			<allotment-status>CNF</allotment-status>
+		</passenger>
+	</passengers>
+</ticket>

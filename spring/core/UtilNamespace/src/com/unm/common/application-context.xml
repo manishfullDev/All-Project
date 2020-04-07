@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<util:list id="tvSpecifications"
+		list-class="java.util.Vector">
+		<value>Surround Sound</value>
+		<value>Smart Internet</value>
+	</util:list>
+
+	<bean id="samsungled32tv" class="com.unm.beans.Product">
+		<property name="productName" value="Samsung Led 32 inch tv" />
+		<property name="specifications" ref="tvSpecifications" />
+	</bean>
+
+</beans>

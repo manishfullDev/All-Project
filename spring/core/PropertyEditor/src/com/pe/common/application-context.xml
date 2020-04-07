@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="table" class="com.pe.beans.Table">
+		<property name="manufacturedDate" value="10/01/2019" />
+		<property name="image" value="d:\tools\excludes.properties" />
+		<property name="link" value="http://www.amazon.in" />
+		<!-- <property name="specifications">
+			<array>
+				<value>10</value>
+				<value>12</value>
+				<value>23</value>
+			</array>
+		</property> -->
+		<property name="specifications" value="10,12,23"/>
+	</bean>
+
+	<bean id="tableManufacturedDate" class="java.util.Date">
+		<constructor-arg value="2019" />
+		<constructor-arg value="1" />
+		<constructor-arg value="10" />
+	</bean>
+	<bean id="imageFile" class="java.io.File">
+		<constructor-arg value="D:\tools\excludes.properties" />
+	</bean>
+	<bean id="link" class="java.net.URL">
+		<constructor-arg value="http://www.amazon.in" />
+	</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+

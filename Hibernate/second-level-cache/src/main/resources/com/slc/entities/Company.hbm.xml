@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.slc.entities">
+	<class name="Company" table="company">
+		<cache usage="read-write" />
+		<id name="companyNo" column="company_no">
+			<generator class="increment" />
+		</id>
+		<property name="businessName" column="business_nm" />
+		<property name="establishedDate" column="established_dt" />
+		<property name="contactNo" column="contact_no" />
+		<property name="emailAddress" column="email_address" />
+		<property name="hrRepresentativeName"
+			column="hr_representative_nm" />
+	</class>
+</hibernate-mapping>

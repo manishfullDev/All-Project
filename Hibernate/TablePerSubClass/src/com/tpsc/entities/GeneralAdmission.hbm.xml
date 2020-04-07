@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpsc.entities">
+	<class name="GeneralAdmission" table="general_admission">
+		<id name="admissionNo" column="admission_no">
+			<generator class="increment" />
+		</id>
+		<property name="admittedDate" column="admitted_dt" />
+		<property name="patientName" column="patient_nm" />
+		<property name="age" />
+		<property name="gender" />
+		<property name="referredDoctorName"
+			column="referred_doctor_nm" />
+	</class>
+</hibernate-mapping>

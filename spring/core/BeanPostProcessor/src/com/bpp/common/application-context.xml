@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="rocket" class="com.bpp.beans.Rocket" />
+	<bean id="microprocessor" class="com.bpp.beans.Microprocessor" scope="prototype"/>
+	<bean id="signalAnalyzer" class="com.bpp.beans.SignalAnalyzer" />
+
+	<bean id="objectTrackerBeanPostProcessor"
+		class="com.bpp.beans.ObjectTrackerBeanPostProcessor" />
+
+</beans>

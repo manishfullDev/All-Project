@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.hdfc.com/netbanking/services" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:hnt="http://www.hdfc.com/netbanking/types" xmlns:java="http://schemas.xmlsoap.org/wsdl/java/" xmlns:format="http://schemas.xmlsoap.org/wsdl/formatbinding/" targetNamespace="http://www.hdfc.com/netbanking/services">
+  <types>
+    <xsd:schema targetNamespace="http://www.hdfc.com/netbanking/types" elementFormDefault="qualified">
+      <xsd:element name="accountNo" type="xsd:string"/>
+      <xsd:element name="account">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="accountNo" type="xsd:string"/>
+            <xsd:element name="accountHolderName" type="xsd:string"/>
+            <xsd:element name="balance" type="xsd:float"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="getAcount">
+    <part name="in" element="hnt:accountNo"/>
+  </message>
+  <message name="getAccountResponse">
+    <part name="out" element="hnt:account"/>
+  </message>
+  <portType name="AccountDetailsEndpoint">
+    <operation name="getAccount">
+      <input message="tns:getAcount"/>
+      <output message="tns:getAccountResponse"/>
+    </operation>
+  </portType>
+  <binding name="AccountDetailsEndpointSOAP11Binding" type="tns:AccountDetailsEndpoint">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getAccount">
+      <soap:operation style="document" soapAction="http://www.hdfc.com/netbanking/services/getAccount"/>
+      <input>
+        <soap:body use="literal" parts="in"/>
+      </input>
+      <output>
+        <soap:body use="literal" parts="out"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="AccountDetailsEndpointSOAP12Binding" type="tns:AccountDetailsEndpoint">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getAccount">
+      <soap12:operation style="document" soapAction="http://www.hdfc.com/netbanking/services/getAccount" soapActionRequired="false"/>
+      <input>
+        <soap12:body use="literal" parts="in"/>
+      </input>
+      <output>
+        <soap12:body use="literal" parts="out"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="AccountDetailsEndpointService">
+    <port name="AccountDetailsEndpointSOAP11Port" binding="tns:AccountDetailsEndpointSOAP11Binding">
+      <soap:address location="http://192.168.56.1:7101/NetbankingProvider-INetbanking2-context-root/AccountDetailsEndpointSOAP11Port"/>
+    </port>
+    <port name="AccountDetailsEndpointSOAP12Port" binding="tns:AccountDetailsEndpointSOAP12Binding">
+      <soap12:address location="http://192.168.56.1:7101/NetbankingProvider-INetbanking2-context-root/AccountDetailsEndpointSOAP12Port"/>
+    </port>
+  </service>
+</definitions>

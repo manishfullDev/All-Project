@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmm.entities">
+	<class name="Shippment" table="shippment">
+		<id name="shippmentNo" column="shippment_no">
+			<generator class="increment" />
+		</id>
+		<property name="shippmentDate" column="shippment_dt" />
+		<property name="inChargeName" column="incharge_nm" />
+		<property name="expectedDeliveryDate"
+			column="expected_delivery_dt" />
+		<property name="contactNo" column="contact_no" />
+		<property name="shippingCompanyName"
+			column="shipping_company_nm" />
+		<property name="status" />
+		<map name="packages">
+			<key column="shippment_no" />
+			<map-key column="tracking_no" type="string"/>
+			<one-to-many class="Package" />
+		</map>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="EnvVariables" basedir="." default="printEnv">
+	<property environment="env"/>
+		
+	<target name="printEnv">
+		<echo>Java Home : ${env.JAVA_HOME}</echo>
+		<echo>Path: ${env.Path}</echo>
+		<echo>Ant Home: ${env.ANT_HOME}</echo>	
+	</target>
+</project>
